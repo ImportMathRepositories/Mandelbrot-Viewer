@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mandelbrot Viewer</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<h1 align="center">Mandelbrot Viewer</h1>
+	<canvas id="mc"></canvas>
+	<table align="center" cellpadding="5">
+		<tr>
+			<th>Width (pixels)</th>
+			<th>Height (pixels)</th>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="number" min="100" max="1000" name="widthInput" value="600" id="widthInput" />
+			</td>
+			<td align="center">
+				<input type="number" min="100" max="1000" name="heightInput" value="500" id="heightInput" />
+			</td>
+		</tr>
+	</table>
+	<table align="center" cellpadding="5">
+		<tr>
+			<th>Real Center (Cartesian x)</th>
+			<th>Imaginary Center (Cartesian y)</th>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="number" name="realCenter" value="-0.7" id="realCenter" />
+			</td>
+			<td align="center">
+				<input type="number" name="imagCenter" value="0.0" id="imagCenter" />
+			</td>
+		</tr>
+	</table>
+	<table align="center" cellpadding="5">
+		<tr>
+			<th>Viewport Zoom (Euclidean width)</th>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="number" name="widthScale" value="2.7" id="widthScale" />
+			</td>
+		</tr>
+	</table>
+	<table align="center" cellpadding="5">
+		<tr>
+			<th>Background Color</th>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="text" name="bgColor" value="#000000" id="bgColor" />
+			</td>
+		</tr>
+	</table>
+	<table align="center" cellpadding="5">
+		<tbody id="depthTable">
+			<tr>
+				<th>Depth</th>
+				<th>Color</th>
+			</tr>
+		</tbody>
+	</table>
+	<table align="center" cellpadding="5">
+		<tr>
+			<td align="center">
+				<button id="plusButton" type="button" onclick="plus_click()">+</button>
+			</td>
+			<td align="center">
+				<button id="minusButton" type="button" onclick="minus_click()">-</button>
+			</td>
+		</tr>
+	</table>
+	<button id="renderButton" type="button" onclick="render_click()">Render</button>
+	<script type="text/javascript" src="global.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

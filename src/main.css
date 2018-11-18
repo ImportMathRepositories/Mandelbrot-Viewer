@@ -1,0 +1,16 @@
+#mc {
+	margin: auto;
+	display: block;
+	padding: 10px;
+}
+
+#renderButton {
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+input {
+	text-align: center;
+}
